@@ -1,0 +1,10 @@
+platform: modbus
+registers:
+    - name: BatteryTemp
+      unit_of_measurement: °C
+      slave: 1
+      register: 12560
+      count: 1
+      register_type: input
+      scale: 0.01
+      precision: 2

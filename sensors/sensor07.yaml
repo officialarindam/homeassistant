@@ -1,0 +1,10 @@
+platform: modbus
+registers:
+    - name: LoadPower
+      unit_of_measurement: Watt
+      slave: 1
+      register: 12558
+      count: 2
+      register_type: input
+      scale: 0.01
+      precision: 2

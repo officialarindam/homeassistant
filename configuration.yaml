@@ -1,0 +1,51 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: Asia/Kolkata
+  customize: !include customize.yaml
+
+frontend:
+
+config:
+
+http:
+  api_password: !secret api_password
+
+updater:
+
+discovery:
+
+conversation:
+
+history:
+
+logbook:
+
+tts:
+  - platform: google
+
+mqtt:
+  broker: !secret mqtt_broker_ip
+  port: !secret mqtt_port
+  client_id: home-assistant
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  discovery: true
+  discovery_prefix: homeassistant
+
+modbus:
+  type: serial
+  method: rtu
+  port: /dev/ttyUSB0
+  baudrate: 115200
+  stopbits: 1
+  bytesize: 8
+  parity: N
+
+group: !include groups.yaml
+automation: !include automations.yaml
+switch: !include_dir_list switches/
+sensor: !include_dir_list sensors/

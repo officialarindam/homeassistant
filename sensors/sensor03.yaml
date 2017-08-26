@@ -1,0 +1,10 @@
+platform: modbus
+registers:
+    - name: SolarPower
+      unit_of_measurement: Watt
+      slave: 1
+      register: 12546
+      count: 2
+      register_type: input
+      scale: 0.01
+      precision: 2

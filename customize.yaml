@@ -1,0 +1,12 @@
+switch.switch01:
+      friendly_name: Relay 1
+switch.switch02:
+      friendly_name: Relay 2
+switch.switch03:
+      friendly_name: Relay 3
+switch.switch04:
+      friendly_name: Relay 4
+switch.switch05:
+      friendly_name: Tracer Load Switch
+switch.switch06:
+      friendly_name: Tracer Charging Switch

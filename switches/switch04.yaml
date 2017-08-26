@@ -1,0 +1,8 @@
+platform: mqtt
+name: "switch04"
+command_topic: "cmnd/switch04"
+state_topic: "stat/switch04"
+qos: 1
+payload_on: "1"
+payload_off: "0"
+retain: true

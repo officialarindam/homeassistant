@@ -1,0 +1,14 @@
+#4 Channel Relay Board:
+#    name: Relay Board 4 Channel
+#    view: no
+#    entities:
+#      - switch.switch01
+#      - switch.switch02
+#      - switch.switch03
+#      - switch.switch04
+      
+#Solar Charge/Load Controller:
+#    name: Solar Charge/Load Controller
+#    view: no
+#    entities:
+#      - switch00

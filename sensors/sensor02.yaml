@@ -1,0 +1,10 @@
+platform: modbus
+registers:
+    - name: SolarCurrent
+      unit_of_measurement: Amp
+      slave: 1
+      register: 12545
+      count: 1
+      register_type: input
+      scale: 0.01
+      precision: 2

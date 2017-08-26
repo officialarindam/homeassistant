@@ -1,0 +1,10 @@
+platform: modbus
+registers:
+    - name: BatteryVoltage
+      unit_of_measurement: Volt
+      slave: 1
+      register: 13082
+      count: 1
+      register_type: input
+      scale: 0.01
+      precision: 2

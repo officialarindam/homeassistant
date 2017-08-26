@@ -1,0 +1,10 @@
+platform: modbus
+registers:
+    - name: BatteryCurrent
+      unit_of_measurement: Amp
+      slave: 1
+      register: 13083
+      count: 1
+      register_type: input
+      scale: 0.01
+      precision: 2

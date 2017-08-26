@@ -1,0 +1,5 @@
+platform: modbus
+coils:
+    - name: switch05
+      slave: 1
+      coil: 2
