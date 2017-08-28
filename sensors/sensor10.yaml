@@ -1,0 +1,9 @@
+platform: modbus
+registers:
+    - name: BatterySOC
+      unit_of_measurement: "%"
+      slave: 1
+      register: 12570
+      count: 1
+      register_type: input
+      scale: 1

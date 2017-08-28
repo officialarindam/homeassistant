@@ -27,6 +27,8 @@ logbook:
 tts:
   - platform: google
 
+sun:
+  
 mqtt:
   broker: !secret mqtt_broker_ip
   port: !secret mqtt_port
@@ -49,3 +51,4 @@ group: !include groups.yaml
 automation: !include automations.yaml
 switch: !include_dir_list switches/
 sensor: !include_dir_list sensors/
+binary_sensor: !include_dir_list binary_sensors/

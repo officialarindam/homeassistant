@@ -1,14 +1,26 @@
-#4 Channel Relay Board:
-#    name: Relay Board 4 Channel
-#    view: no
-#    entities:
-#      - switch.switch01
-#      - switch.switch02
-#      - switch.switch03
-#      - switch.switch04
+4_Channel_Relay_Board:
+    name: MQTT - Five Channel Relay Plug Board
+    control: hidden
+    entities:
+      - switch.switch01
+      - switch.switch02
+      - switch.switch03
+      - switch.switch04
       
-#Solar Charge/Load Controller:
-#    name: Solar Charge/Load Controller
-#    view: no
-#    entities:
-#      - switch00
+Solar_Charge_&_Load_Controller:
+    name: Modbus RTU - Solar Charge/Load Controller
+    control: hidden
+    entities:
+      - sun.sun
+      - sensor.solarvoltage
+      - sensor.solarcurrent
+      - sensor.solarpower
+      - sensor.batteryvoltage
+      - sensor.batterycurrent
+      - sensor.batterytemp
+      - sensor.batterysoc
+      - sensor.devicetemp
+      - sensor.loadcurrent
+      - sensor.loadpower
+      - switch.switch00
+      - sensor.des

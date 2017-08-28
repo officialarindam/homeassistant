@@ -2,6 +2,7 @@ platform: mqtt
 name: "switch01"
 command_topic: "cmnd/switch01"
 state_topic: "stat/switch01"
+#availability_topic: "cmnd/switch01"
 qos: 1
 payload_on: "1"
 payload_off: "0"
