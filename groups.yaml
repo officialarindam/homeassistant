@@ -1,6 +1,6 @@
 4_Channel_Relay_Board:
-    name: MQTT - Five Channel Relay Plug Board
-    control: hidden
+    name: MQTT - Eight Channel Relay Plug Board
+#    control: hidden
     entities:
       - switch.switch01
       - switch.switch02

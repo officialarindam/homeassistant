@@ -9,6 +9,12 @@ homeassistant:
 
 frontend:
 
+panel_iframe:
+  terminal:
+    title: Terminal
+    icon: mdi:console
+    url: !secret terminal_ip
+
 config:
 
 http:
