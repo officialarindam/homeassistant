@@ -1,17 +1,60 @@
-4_Channel_Relay_Board:
-    name: MQTT - Eight Channel Relay Plug Board
-#    control: hidden
+switch_view:
+    name: Switches
+    view: yes
     entities:
+      - group.relay_board_1_card
+      - group.relay_board_2_card
+      - group.dc_switch_card
+      
+network_view:
+    name: Network
+    view: yes
+    entities:
+      - group.router_1_card
+      - group.network_card
+      
+solar_view:
+    name: Solar
+    view: yes
+    entities:
+      - group.solar_controller_1_card
+
+relay_board_1_card:
+    name: Four Socket WiFi Power Strip - 1
+    control: hidden
+    entities:
+      - sensor.signal_strength_1
       - switch.switch01
       - switch.switch02
       - switch.switch03
       - switch.switch04
-      
-Solar_Charge_&_Load_Controller:
-    name: Modbus RTU - Solar Charge/Load Controller
+
+relay_board_2_card:
+    name: Four Socket WiFi Power Strip - 2
     control: hidden
     entities:
-      - sun.sun
+      - sensor.signal_strength_2
+      - switch.switch05
+      - switch.switch06
+      - switch.switch07
+      - switch.switch08
+      
+router_1_card:
+    name: Router - 1
+    entities:
+      - sensor.router1temp
+      - sensor.router1volt
+      
+network_card:
+    name: Network Status
+    entities:
+      - sensor.gdns
+      - sensor.abspl
+      
+solar_controller_1_card:
+    name: Solar Charge/Load Controller 1
+    control: hidden
+    entities:
       - sensor.solarvoltage
       - sensor.solarcurrent
       - sensor.solarpower
@@ -22,5 +65,9 @@ Solar_Charge_&_Load_Controller:
       - sensor.devicetemp
       - sensor.loadcurrent
       - sensor.loadpower
+      
+dc_switch_card:
+    name: DC Switches
+    control: hidden
+    entities:
       - switch.switch00
-      - sensor.des

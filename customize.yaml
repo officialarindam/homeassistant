@@ -1,12 +1,54 @@
 switch.switch00:
-      friendly_name: Load
+      friendly_name: Controller 1 Load Switch
+
+      
+
 switch.switch01:
-      friendly_name: Relay 1
+      friendly_name: Socket 1
 switch.switch02:
-      friendly_name: Relay 2
+      friendly_name: Socket 2
 switch.switch03:
-      friendly_name: Relay 3
+      friendly_name: Socket 3
 switch.switch04:
-      friendly_name: Relay 4
-sensor.des:
-      friendly_name: Load Status
+      friendly_name: Socket 4
+switch.switch05:
+      friendly_name: Socket 5
+switch.switch06:
+      friendly_name: Socket 6
+switch.switch07:
+      friendly_name: Socket 7
+switch.switch08:
+      friendly_name: Socket 8
+      
+      
+      
+sensor.signal_strength_1:
+      friendly_name: Connection Strength
+      icon: mdi:wifi
+sensor.signal_strength_2:
+      friendly_name: Connection Strength
+      icon: mdi:wifi
+      
+      
+
+sensor.router1temp:
+      friendly_name: Router Temperature
+sensor.router1volt:
+      friendly_name: Router Voltage
+      icon: mdi:flash
+
+      
+      
+binary_sensor.gdns:
+      hidden: true
+sensor.gdns:
+      friendly_name: 'Google DNS'
+      icon: mdi:google
+
+      
+      
+binary_sensor.abspl:
+      hidden: true
+sensor.abspl:
+      friendly_name: 'Alliance Broadband'
+      icon: mdi:earth

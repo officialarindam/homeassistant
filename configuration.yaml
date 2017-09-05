@@ -32,8 +32,6 @@ logbook:
 
 tts:
   - platform: google
-
-sun:
   
 mqtt:
   broker: !secret mqtt_broker_ip
@@ -53,6 +51,17 @@ modbus:
   bytesize: 8
   parity: N
 
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api
+    allowed_chat_ids:
+      - !secret arindam_chat_id
+      
+notify:
+  - name: bivabori
+    platform: telegram
+    chat_id: !secret arindam_chat_id
+  
 group: !include groups.yaml
 automation: !include automations.yaml
 switch: !include_dir_list switches/

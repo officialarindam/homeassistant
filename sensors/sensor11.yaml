@@ -1,7 +1,0 @@
-platform: modbus
-registers:
-    - name: DES
-      slave: 1
-      register: 12802
-      count: 1
-      register_type: input

@@ -1,1 +1,144 @@
-[]
+- id: a_ps1_online
+  alias: Power Stripe 1 Online
+  trigger:
+  - payload: online
+    platform: mqtt
+    topic: lwt/ps1    
+  action:
+  - service: notify.bivabori
+    data:
+      message: 4 port power stripe-1 is Online. Please choose button for desired option.
+      data:
+          keyboard:
+            - '/switch01on, /switch01off'
+            - '/switch02on, /switch02off'
+            - '/switch03on, /switch03off'
+            - '/switch04on, /switch04off'
+      
+
+
+- id: a_switch01_on
+  alias: switch01_on
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch01on
+  action:
+  - service: switch.turn_on
+    entity_id: switch.switch01
+  - service: notify.bivabori
+    data:
+      message: Socket Number 1 is Switched On
+      
+- id: a_switch02_on
+  alias: switch02_on
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch02on
+  action:
+  - service: switch.turn_on
+    entity_id: switch.switch02
+  - service: notify.bivabori
+    data:
+      message: Socket Number 2 is Switched On
+      
+- id: a_switch03_on
+  alias: switch03_on
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch03on
+  action:
+  - service: switch.turn_on
+    entity_id: switch.switch03
+  - service: notify.bivabori
+    data:
+      message: Socket Number 3 is Switched On
+      
+- id: a_switch04_on
+  alias: switch04_on
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch04on
+  action:
+  - service: switch.turn_on
+    entity_id: switch.switch04
+  - service: notify.bivabori
+    data:
+      message: Socket Number 4 is Switched On
+      
+- id: a_switch01_off
+  alias: switch01_off
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch01off
+  action:
+  - service: switch.turn_off
+    entity_id: switch.switch01
+  - service: notify.bivabori
+    data:
+      message: Socket Number 1 is Switched Off
+
+- id: a_switch02_off
+  alias: switch02_off
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch02off
+  action:
+  - service: switch.turn_off
+    entity_id: switch.switch02
+  - service: notify.bivabori
+    data:
+      message: Socket Number 2 is Switched Off
+      
+- id: a_switch03_off
+  alias: switch03_off
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch03off
+  action:
+  - service: switch.turn_off
+    entity_id: switch.switch03
+  - service: notify.bivabori
+    data:
+      message: Socket Number 3 is Switched Off
+      
+- id: a_switch04_off
+  alias: switch04_off
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /switch04off
+  action:
+  - service: switch.turn_off
+    entity_id: switch.switch04
+  - service: notify.bivabori
+    data:
+      message: Socket Number 4 is Switched Off
+
+
+
+
+- id: a_ps1_offline
+  alias: Power Stripe 1 Offline
+  trigger:
+  - payload: offline
+    platform: mqtt
+    topic: lwt/ps1    
+  action:
+  - service: notify.bivabori
+    data:
+      message: Power Stripe-1 is Offline Now.

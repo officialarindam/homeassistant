@@ -1,0 +1,8 @@
+platform: snmp
+name: 'router1volt'
+host: 192.168.254.254
+baseoid: .1.3.6.1.4.1.14988.1.1.3.8.0
+version: 2c
+accept_errors: true
+unit_of_measurement: 'Volt'
+value_template: '{{((value | int) / 10) | float}}'
