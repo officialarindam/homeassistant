@@ -1,5 +1,0 @@
-platform: mqtt
-state_topic: "rssi/nodemcu2"
-name: Signal Strength 2
-unit_of_measurement: "dbm"
-expire_after: 5

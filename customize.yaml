@@ -22,20 +22,22 @@ switch.switch08:
       
       
       
-sensor.signal_strength_1:
-      friendly_name: Connection Strength
-      icon: mdi:wifi
-sensor.signal_strength_2:
-      friendly_name: Connection Strength
-      icon: mdi:wifi
-      
-      
-
 sensor.router1temp:
-      friendly_name: Router Temperature
+      friendly_name: Temperature
 sensor.router1volt:
-      friendly_name: Router Voltage
+      friendly_name: Voltage
       icon: mdi:flash
+sensor.router1memory:
+      friendly_name: Memory Used
+      icon: mdi:memory
+sensor.router1cpu:
+      friendly_name: CPU Load
+      icon: mdi:chart-line
+sensor.router1uptime:
+      hidden: true
+sensor.r1uptime:      
+      friendly_name: Uptime
+      icon: mdi:clock
 
       
       
@@ -47,8 +49,16 @@ sensor.gdns:
 
       
       
-binary_sensor.abspl:
+binary_sensor.abspl_bdn:
       hidden: true
-sensor.abspl:
-      friendly_name: 'Alliance Broadband'
+sensor.abspl_bdn:
+      friendly_name: 'Alliance Burdwan Node'
+      icon: mdi:earth
+
+      
+      
+binary_sensor.abspl_kol:
+       hidden: true
+sensor.abspl_kol:
+      friendly_name: 'Alliance Kolkata Node'
       icon: mdi:earth

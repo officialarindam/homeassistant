@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  abspl_kol:
+    value_template: '{% if is_state("binary_sensor.abspl_kol", "on") %} {{ states.binary_sensor.abspl_kol.attributes.round_trip_time_avg }} {% else %}Offline{% endif %}'
+    unit_of_measurement: 'ms'

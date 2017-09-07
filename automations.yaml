@@ -1,13 +1,13 @@
 - id: a_ps1_online
   alias: Power Stripe 1 Online
   trigger:
-  - payload: online
+  - payload: 1
     platform: mqtt
     topic: lwt/ps1    
   action:
   - service: notify.bivabori
     data:
-      message: 4 port power stripe-1 is Online. Please choose button for desired option.
+      message: 4 port power stripe-1 is online now. Please choose buttons for desired action.
       data:
           keyboard:
             - '/switch01on, /switch01off'
@@ -135,10 +135,10 @@
 - id: a_ps1_offline
   alias: Power Stripe 1 Offline
   trigger:
-  - payload: offline
+  - payload: 0
     platform: mqtt
     topic: lwt/ps1    
   action:
   - service: notify.bivabori
     data:
-      message: Power Stripe-1 is Offline Now.
+      message: 4 port power stripe-1 is offline now.

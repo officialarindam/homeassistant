@@ -2,7 +2,10 @@ platform: mqtt
 name: "switch08"
 command_topic: "cmnd/switch08"
 state_topic: "stat/switch08"
+availability_topic: "lwt/ps2"
 qos: 1
 payload_on: "1"
 payload_off: "0"
+payload_available: "1"
+payload_not_available: "0"
 retain: true

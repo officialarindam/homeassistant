@@ -1,0 +1,8 @@
+platform: snmp
+name: 'router1memory'
+host: !secret router1
+baseoid: .1.3.6.1.2.1.25.2.3.1.6.65536
+version: 2c
+accept_errors: true
+unit_of_measurement: 'Mb'
+value_template: '{{(128 - ((value | int) / 1024) | float | round(1))}}'
